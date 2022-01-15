@@ -1,1 +1,1 @@
-# service-httpd
+# Apache HTTPD service
