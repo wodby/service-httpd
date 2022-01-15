@@ -1,0 +1,40 @@
+name: httpd
+type: service
+icon: httpd
+title: Apache HTTP server
+scalable: true
+
+options:
+- version: 2.4
+  default: true
+
+containers:
+- name: httpd
+  image: wodby/apache
+  ports:
+  - name: http
+    number: 80
+    type: http
+    main: true
+    
+labels:
+- httpd
+- apache
+
+build:
+  dockerfile: Dockerfile
+  templates:
+  - name: nextjs
+    title: Next.js
+    repo: https://github.com/wodby/nextjs
+    branch: main
+
+settings:
+- name: docroot
+  title: Apache docroot subdir
+  from: backend
+  var: DOCROOT_SUBDIR
+
+env:
+- name: APACHE_DOCUMENT_ROOT
+  value: /var/www/html/$(DOCROOT_SUBDIR)
