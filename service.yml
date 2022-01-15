@@ -22,6 +22,7 @@ labels:
 - apache
 
 build:
+  connect: true
   dockerfile: Dockerfile
   templates:
   - name: nextjs
