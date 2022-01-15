@@ -32,7 +32,6 @@ build:
 settings:
 - name: docroot
   title: Apache docroot subdir
-  from: backend
   var: DOCROOT_SUBDIR
 
 env:
