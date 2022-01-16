@@ -23,7 +23,6 @@ labels:
 
 build:
   connect: true
-  dockerfile: Dockerfile
   templates:
   - name: nextjs
     title: Next.js
