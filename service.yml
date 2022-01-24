@@ -3,6 +3,7 @@ type: service
 icon: httpd
 title: Apache HTTP server
 scalable: true
+hostname: httpd
 
 options:
 - version: 2.4
@@ -22,6 +23,7 @@ labels:
 - apache
 
 build:
+  connect: true
   templates:
   - name: nextjs
     title: Next.js
