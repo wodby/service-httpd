@@ -6,7 +6,7 @@ scalable: true
 hostname: httpd
 
 options:
-- version: 2.4
+- version: '2.4'
   default: true
 
 containers:
