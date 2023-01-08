@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    name: httpd
-  name: httpd
+    name: '{{.Name}}'
+  name: '{{.Name}}'
 spec:
   selector:
     matchLabels:
-      name: httpd
+      name: '{{.Name}}'
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        name: httpd
+        name: '{{.Name}}'
     spec:
       containers:
       - env:
