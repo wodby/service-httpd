@@ -6,7 +6,7 @@ scalable: true
 hostname: httpd
 
 options:
-- version: 2.4
+- version: '2.4'
   tag: 2.4.59-debian-12-r1
   default: true
 
