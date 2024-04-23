@@ -6,12 +6,13 @@ scalable: true
 hostname: httpd
 
 options:
-- version: '2.4'
+- version: 2.4
+  tag: 2.4.59-debian-12-r1
   default: true
 
 containers:
 - name: httpd
-  image: wodby/apache
+  image: bitnami/apache
   ports:
   - name: http
     number: 80
@@ -38,3 +39,20 @@ settings:
 env:
 - name: APACHE_DOCUMENT_ROOT
   value: /var/www/html/$(DOCROOT_SUBDIR)
+
+  
+helm:
+  name: bitnami
+  source: oci://registry-1.docker.io/bitnamicharts/apache
+  chart: oci://registry-1.docker.io/bitnamicharts/apache
+  version: 11.0.2
+  configurations:
+  - name: apache
+    labels: commonLabels
+    annotations: commonAnnotations
+    env: extraEnvVars
+    resources: resources
+    ingresses: 
+    - name: common
+      service: '{{service.name}}'
+
