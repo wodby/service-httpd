@@ -18,6 +18,9 @@ containers:
     number: 80
     type: http
     main: true
+  env:
+  - name: DISABLE_WELCOME_MESSAGE
+    value: 'true'
     
 labels:
 - httpd
