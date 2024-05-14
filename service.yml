@@ -17,7 +17,7 @@ containers:
   - name: DISABLE_WELCOME_MESSAGE
     value: 'true'
 
-routes:
+endpoints:
 - name: http
   ports:
   - name: http
