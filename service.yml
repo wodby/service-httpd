@@ -58,9 +58,6 @@ helm:
     annotations: commonAnnotations
     env: extraEnvVars
     resources: resources
-    ingresses: 
-    - name: common
-      service: '{{service.name}}'
   values:
   - name: resourcesPreset
     value: 'none'
