@@ -53,9 +53,8 @@ env:
 - name: APACHE_DOCUMENT_ROOT
   value: /var/www/html/$(DOCROOT_SUBDIR)
 
-  
 helm:
-  name: bitnami
+  name: wodby
   source: oci://registry-1.docker.io/wodby/httpd
   chart: oci://registry-1.docker.io/wodby/httpd
   version: 0.1.0
