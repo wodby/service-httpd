@@ -7,15 +7,12 @@ hostname: httpd
 
 options:
 - version: '2.4'
-  tag: 2.4.59-debian-12-r1
+  tag: 2.4
   default: true
 
 containers:
 - name: httpd
-  image: bitnami/apache
-  env:
-  - name: DISABLE_WELCOME_MESSAGE
-    value: 'true'
+  image: wodby/apache
 
 endpoints:
 - name: http
@@ -49,16 +46,14 @@ env:
   
 helm:
   name: bitnami
-  source: oci://registry-1.docker.io/bitnamicharts/apache
-  chart: oci://registry-1.docker.io/bitnamicharts/apache
-  version: 11.0.2
+  source: oci://registry-1.docker.io/wodby/httpd
+  chart: oci://registry-1.docker.io/wodby/httpd
+  version: 0.1.0
   configurations:
-  - name: apache
+  - name: httpd
     labels: commonLabels
     annotations: commonAnnotations
     env: extraEnvVars
     resources: resources
-  values:
-  - name: resourcesPreset
-    value: 'none'
-  
+    volumes: extraVolumes
+    mounts: extraVolumeMounts
