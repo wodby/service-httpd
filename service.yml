@@ -65,6 +65,7 @@ workloads:
   containers:
   - name: apache
     image: wodby/apache
+    build: true
     helm:
       resources: resources
       env: extraEnvVars
