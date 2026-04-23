@@ -53,19 +53,19 @@ helm:
   source: oci://registry-1.docker.io/wodby/httpd
   chart: oci://registry-1.docker.io/wodby/httpd
   version: 0.2.0
+
 workloads:
 - id: main
   kind: deployment
   primary: true
-  containers:
-  - name: apache
-    image: wodby/apache
-
-    helm:
-      resources: resources
-      env: extraEnvVars
-      mounts: extraVolumeMounts
   helm:
     labels: commonLabels
     annotations: commonAnnotations
     volumes: extraVolumes
+  containers:
+  - name: apache
+    image: wodby/apache
+    helm:
+      resources: resources
+      env: extraEnvVars
+      mounts: extraVolumeMounts
