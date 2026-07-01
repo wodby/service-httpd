@@ -6,7 +6,7 @@ scalable: true
 
 options:
 - version: '2.4'
-  tag: '2.4'
+  tag: '2.4-4.18.1'
   default: true
 
 endpoints:
