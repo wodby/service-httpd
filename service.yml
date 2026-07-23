@@ -21,11 +21,15 @@ configs:
 - name: main
   title: Main
   filepath: /etc/gotpl/http.conf.tmpl
-  config: httpd.conf.tmpl
+  default:
+    source: image
+    filepath: /etc/gotpl/httpd.conf.tmpl
 - name: vhost
   title: Virtual host
   filepath: /etc/gotpl/vhost.conf.tmpl
-  config: vhost.conf.tmpl
+  default:
+    source: image
+    filepath: /etc/gotpl/vhost.conf.tmpl
 
 labels:
 - httpd
