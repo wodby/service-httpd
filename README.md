@@ -9,10 +9,10 @@ configuration for Apache HTTP server.
 - [Wodby service documentation](https://wodby.com/docs/2.0/services/)
 - [Service manifest reference](https://wodby.com/docs/2.0/services/template/)
 
-## Start with a template
+## Start with a boilerplate
 
-Use one of the source templates exposed by this service to start with
-compatible build configuration and Wodby CI:
+Use one of the boilerplates exposed by this service to start with compatible
+build configuration and Wodby CI:
 
 - [Next.js](https://github.com/wodby/nextjs-boilerplate)
 
@@ -26,7 +26,7 @@ compatible build configuration and Wodby CI:
 | Workloads | `main` (Deployment), primary; scalable |
 | Containers | `apache` using `wodby/apache`, build target |
 | Endpoints | `http`: HTTP 80 (main) |
-| Application build | Git source connection enabled; starters: Next.js |
+| Application build | Git source connection enabled; boilerplates: Next.js |
 | Helm | chart `oci://registry-1.docker.io/wodby/httpd`; version `0.2.0` |
 | Configuration | 1 settings, 2 configuration files |
 
