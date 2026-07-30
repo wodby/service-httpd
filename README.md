@@ -27,7 +27,7 @@ build configuration and Wodby CI:
 | Containers | `apache` using `wodby/apache`, build target |
 | Endpoints | `http`: HTTP 80 (main) |
 | Application build | Git source connection enabled; boilerplates: Next.js |
-| Helm | chart `oci://registry-1.docker.io/wodby/httpd`; version `0.2.0` |
+| Helm | chart `oci://registry-1.docker.io/wodby/httpd`; version `0.2.1` |
 | Configuration | 1 settings, 2 configuration files |
 
 ## Use this service
