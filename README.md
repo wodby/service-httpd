@@ -14,7 +14,11 @@ configuration for Apache HTTP server.
 Use one of the boilerplates exposed by this service to start with compatible
 build configuration and Wodby CI:
 
-- [Next.js](https://github.com/wodby/nextjs-boilerplate)
+- [HTML boilerplate](https://github.com/wodby/html-boilerplate)
+
+## Wodby stacks using this service
+
+- [HTML application stack](https://github.com/wodby/stack-html)
 
 ## Service overview
 
@@ -26,13 +30,14 @@ build configuration and Wodby CI:
 | Workloads | `main` (Deployment), primary; scalable |
 | Containers | `apache` using `wodby/apache`, build target |
 | Endpoints | `http`: HTTP 80 (main) |
-| Application build | Git source connection enabled; boilerplates: Next.js |
+| Application build | Git source connection enabled; boilerplates: HTML boilerplate |
 | Helm | chart `oci://registry-1.docker.io/wodby/httpd`; version `0.3.2` |
 | Configuration | 1 settings, 2 configuration files |
 
 ## Use this service
 
-Reference `httpd` from a Wodby stack to use this service.
+Use this service through [HTML application stack](https://github.com/wodby/stack-html), or reference `httpd` from a custom
+Wodby stack.
 
 A service is a reusable component and does not deploy by itself. The stack
 defines its links, settings, versions, resources, and relationship to the rest
