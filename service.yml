@@ -20,7 +20,7 @@ endpoints:
 configs:
 - name: main
   title: Main
-  filepath: /etc/gotpl/http.conf.tmpl
+  filepath: /etc/gotpl/httpd.conf.tmpl
   default:
     source: image
     filepath: /etc/gotpl/httpd.conf.tmpl

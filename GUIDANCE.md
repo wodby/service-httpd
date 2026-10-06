@@ -10,7 +10,7 @@ To change the configuration:
 
 - Set `APACHE_*` environment variables on the service.
 - Change the `docroot` setting.
-- Override the virtual host template, declared as a config file of this service.
+- Override the main configuration template or the virtual host template, both declared as config files of this service.
 - Add `.htaccess` files to the codebase: overrides are allowed in the document root (`APACHE_ALLOW_OVERRIDE_ENABLED`), and `mod_rewrite`, `mod_headers`, `mod_expires` and `mod_deflate` are loaded.
 
 ## Preset
