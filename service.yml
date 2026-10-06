@@ -3,6 +3,7 @@ type: service
 icon: httpd
 title: Apache HTTP server
 scalable: true
+guidance: GUIDANCE.md
 
 options:
 - version: '2.4'
