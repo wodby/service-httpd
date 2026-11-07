@@ -80,6 +80,8 @@ workloads:
   containers:
   - name: apache
     image: wodby/apache
+    resources:
+      preset: nano
     build: true
     helm:
       resources: resources
