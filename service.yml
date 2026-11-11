@@ -7,7 +7,7 @@ guidance: GUIDANCE.md
 
 options:
 - version: '2.4'
-  tag: 2.4-r4
+  tag: 2.4-r5
   default: true
 endpoints:
 - name: http
