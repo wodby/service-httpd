@@ -8,6 +8,7 @@ guidance: GUIDANCE.md
 options:
 - version: '2.4'
   tag: 2.4-r6
+  digest: sha256:3e516365c0a88f91695f311fc28446bba5f013dc2bd1301fccdfc128103e3094
   default: true
 endpoints:
 - name: http
